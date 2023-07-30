@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: interface-user
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: interface-user
+  template:
+    metadata:
+      labels:
+        app: interface-user
+    spec:
+      containers:
+        - name: interface-user
+          image: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/user-app:4cc1d0bb52f6557ce39af9661dc80edb20bc8897
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9002

@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/user-app
+  newName: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/user-app
+  newTag: abcdefg
+resources:
+- ../../base
+patchesStrategicMerge:
+- user-deployment-patch.yaml
+- user-service-patch.yaml

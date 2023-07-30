@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: interface-user
+  namespace: default
+  labels:
+    env: user
+spec:
+  selector:
+    matchLabels:
+      app: interface-user
+  template:
+    metadata:
+      labels:
+        app: interface-user

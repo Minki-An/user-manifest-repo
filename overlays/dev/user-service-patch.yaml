@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: interface-user
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-path: "/api/user"
+  labels:
+    env: user
+spec:
+  selector:
+    app: interface-user

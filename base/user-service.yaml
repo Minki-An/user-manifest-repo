@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: interface-user
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-path: "/api/user"
+spec:
+  selector:
+    app: interface-user
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 9002
+      protocol: TCP
