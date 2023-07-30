@@ -8,4 +8,3 @@ resources:
 - ../../base
 patchesStrategicMerge:
 - user-deployment-patch.yaml
-- user-service-patch.yaml
