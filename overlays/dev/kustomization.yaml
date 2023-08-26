@@ -4,6 +4,9 @@ images:
 - name: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/user-app
   newName: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/user-app
   newTag: abcdefg
+- name: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/user}-app
+  newName: 138778713921.dkr.ecr.ap-northeast-2.amazonaws.com/user-app
+  newTag: 02e95cf7
 resources:
 - ../../base
 patchesStrategicMerge:
